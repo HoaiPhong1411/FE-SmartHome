@@ -1,25 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
-
+import ClientLayout from './Layout/ClientLayout';
+import { ClientRoutes } from './Router/Router';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
+    const renderLayout = ( routes) => {
+      return (
+        routes?.map((route) => {
+          const { path, element, index } = route;
+          return (
+            <Route key={index} element={element} path={path} index={index} />
+          )
+        })
+      )
+    }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    <Router >
+      <Routes> 
+        <Route path='/' element={<ClientLayout/>}>
+          {renderLayout(ClientRoutes)}
+        </Route>
+        <Route path='*' element={<>e</>}/>
+      </Routes>  
+    </Router>
+    </>
+  )
 }
 
 export default App;
