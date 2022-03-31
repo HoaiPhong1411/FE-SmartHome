@@ -17,7 +17,7 @@ module.exports = {
     width: {
       'container': '1200px',
     },
-    screen: {
+    screens: {
       'tl': '640px',
       'dt': '1200px'
     },
