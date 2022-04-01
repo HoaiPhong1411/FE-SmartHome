@@ -4,7 +4,6 @@ module.exports = {
   ],
   theme: {
     colors: {
-      'background': '#f4f4f4',
       'primary': '#057566',
       'hover': '#009981',
       'second': '#00483d',
@@ -14,10 +13,13 @@ module.exports = {
     borderRadius: {
       'bd8': '8px'
     },
+    padding: {
+      '10px': '0.625rem'
+    },
     width: {
       'container': '1200px',
     },
-    screen: {
+    screens: {
       'tl': '640px',
       'dt': '1200px'
     },

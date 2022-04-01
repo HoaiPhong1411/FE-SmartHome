@@ -1,7 +1,6 @@
 const NavBar = () => {
     return ( 
         <>
-        navbar
         </>
      );
 }

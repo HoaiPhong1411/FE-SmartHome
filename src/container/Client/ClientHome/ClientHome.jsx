@@ -1,7 +1,9 @@
+import ClientSlideBanner from "../ClientSlideBanner/ClientSliderBanner";
+
 const ClientHome = () => {
     return ( 
         <>
-            Fuck
+            <ClientSlideBanner/>
         </>
      );
 }
