@@ -1,7 +1,7 @@
 import { BiSearch } from "react-icons/bi";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-
+import './ClientInputSearch.css';
 
 const ListProSearch = [
 {
@@ -120,7 +120,7 @@ const ClientInputSearch = () => {
             {/* dropDown */}
             <div
               ref={dropDownRef}
-              className="absolute hidden opacity-0 top-[2.8rem] rounded-bd8 shadow-shadow-primary w-[100%] h-0 overflow-y-scroll bg-[#fff] px-10px transition-all"
+              className="dropDown absolute hidden opacity-0 top-[2.8rem] rounded-bd8 shadow-shadow-primary w-[100%] h-0 overflow-y-scroll bg-[#fff] px-10px transition-all"
             >
               <ul>
                 {inputValue == ""
