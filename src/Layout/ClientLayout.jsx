@@ -3,6 +3,7 @@ import Footer from "../component/Footer";
 import Header from "../component/Header";
 import NavBar from "../component/NavBar";
 import React from "react";
+import HeaderBrand from "../component/HeaderBrand";
 
 export default function ClientLayout() {
     return (

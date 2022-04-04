@@ -1,7 +1,9 @@
+import FeatureProduct from "./Featureproduct/FeatureProduct";
+
 const ClientHome = () => {
     return ( 
         <>
-            Fuck
+            <FeatureProduct />
         </>
      );
 }
