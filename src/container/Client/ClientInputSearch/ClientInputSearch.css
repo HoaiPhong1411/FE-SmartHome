@@ -1,0 +1,13 @@
+.dropDown::-webkit-scrollbar{
+    width: 0.25rem;
+}
+
+.dropDown::-webkit-scrollbar-track{
+    background-color: #ececec;
+    border-radius: 0.75rem;
+}
+
+.dropDown::-webkit-scrollbar-thumb{
+    background-color: #00483d;
+    border-radius: 0.75rem;
+}

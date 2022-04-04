@@ -8,8 +8,8 @@ import {
   AiFillGoogleSquare,
   AiOutlineCopyrightCircle,
 } from "react-icons/ai";
-import logo from "../asssets/logo-bct.png";
-import logo2 from "../asssets/logo2.png";
+import logo from "../assets/images/logo-bct.png";
+import logo2 from "../assets/images/logo2.png";
 
 const nav = [
   {
@@ -36,14 +36,14 @@ const nav = [
 
 const Footer = () => {
   return (
-    <div className="w-full h-auto bg-primary text-background text-13px tl:text-18px pt-2 pb-4  px-[10px]  ">
-      <div className="flex justify-around text-background ">
+    <div className="w-full h-auto bg-primary pt-[20px] text-[#ffff] text-13px tl:text-13px pt-2 pb-4  px-[10px]  ">
+      <div className="flex justify-around  ">
         <div>
           {nav.map((item, index) => {
             return (
               <ul key={index}>
                 <Link to={item.path} className="uppercase hover:text-hover">
-                  <li className="transition-all">{item.display}</li>
+                  <li className="transition-all text-white">{item.display}</li>
                 </Link>
               </ul>
             );
@@ -55,7 +55,7 @@ const Footer = () => {
           <div className="flex flex-col">
             <span>Hotline : 0971 782 741 </span>
             <span>Phone : 0971 782 741</span>
-            <div className="flex text-18px gap-2 mt-2">
+            <div className="flex text-[16px] dt:text-[26px] gap-2 mt-2">
               <AiFillFacebook />
               <AiFillTwitterSquare />
               <AiFillYoutube />
@@ -72,7 +72,7 @@ const Footer = () => {
         {/* end image */}
       </div>
       {/* coppy */}
-      <div className="flex items-center text-center justify-center mt-3">
+      <div className="flex items-center text-center justify-center">
         <AiOutlineCopyrightCircle />
         <p className=" font-semibold">2022 CÔNG TY CÔNG NGHỆ SMARTHOME</p>
       </div>

@@ -4,7 +4,6 @@ module.exports = {
   ],
   theme: {
     colors: {
-      'background': '#f4f4f4',
       'primary': '#057566',
       'hover': '#009981',
       'second': '#00483d',
@@ -12,7 +11,11 @@ module.exports = {
       'color-orange': '#f7941e',
     },
     borderRadius: {
-      'bd8': '8px'
+      'bd8': '8px',
+      'bd4' : '4px'
+    },
+    padding: {
+      '10px': '0.625rem'
     },
     width: {
       'container': '1200px',
@@ -28,6 +31,9 @@ module.exports = {
     extend: {
         boxShadow: {
           'shadow-primary': '0 4px 6px #00000029',
+        },
+        backgroundImage : {
+            // 'heading' : "url ('./src/assets/images/heading.png')"
         }
     },
   },
