@@ -62,7 +62,7 @@ const ClientSlideProduct = () => {
   return (
     <>
       <div className="w-full dt:w-container mx-auto mt-[1.25rem]">
-        <ComponentBrand content="featured product" />
+        <ComponentBrand content="featured product" link="/product" />
       </div>
       <ComponentSlide data={ListPro} button={false} />
     </>

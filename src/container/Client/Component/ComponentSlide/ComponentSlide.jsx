@@ -88,7 +88,7 @@ const ComponentSlide = (props) => {
         <Slider
           ref={sliderRef}
           {...settings}
-          className="relative w-full mt-[1.25rem] mb-[10rem] py-10px dt:w-[90%] mx-auto"
+          className="relative w-full mt-[1.25rem] py-10px dt:w-[90%] mx-auto"
         >
           {data.map((item, i) => (
             <div
