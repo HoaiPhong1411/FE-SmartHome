@@ -22,7 +22,7 @@ function App() {
         <Route path='/' element={<ClientLayout/>}>
           {renderLayout(ClientRoutes)}
         </Route>
-        <Route path='*' element={<img src="https://wpklik.com/wp-content/uploads/2019/03/A-404-Page-Best-Practices-and-Design-Inspiration.jpg" className='w-[100vw] h-[100vh]' />}/>
+        <Route path='*' element={<img src='https://www.totolink.vn/public/uploads/img_post/truy-tim-nguyen-nhan-va-cach-sua-chua-loi-tra-cuu-404-not-found-1.jpg' className='dt:w-[100vw] dt:h-[100vh]' />}/>
       </Routes>  
     </Router>
     </>

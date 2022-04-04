@@ -1,0 +1,82 @@
+
+
+
+/* dots slide */
+
+.slick-dots {
+    transform: translateY(-2rem);
+}
+.slick-dots li button::before{
+    color: #009981;
+    font-size: 0.65rem;
+}
+
+.slick-dots li.slick-active button::before {
+    color: #00483d;
+    font-size: 1rem;
+}
+
+/* End dots slide */
+
+
+/* arrow slide */
+
+.my-arrow{
+    z-index: 1000;
+    width: 3rem;
+    height: 3rem;
+    background-color: #0575666b;
+    border-radius:50%;
+    cursor: pointer;
+    top:calc(50% - 1.5rem);
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color:white;
+}
+.my-arrow:hover {
+    background:#00483d89 !important;
+    opacity: 1;
+}
+
+.my-arrow::before{
+    font-family: "fontAwesome" !important;
+    color:#111;
+}
+
+
+/* End arrow slide */
+
+@media (min-width:640px) {
+    .slick-dots {
+        transform: translateY(-2rem) !important;
+    }
+    .slick-dots li button::before{
+        color: #009981;
+        font-size: 0.85rem;
+    }
+    
+    .slick-dots li.slick-active button::before {
+        color: #00483d;
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width:1200px) {
+    .slick-list {
+        border-radius: 0.8rem;
+    }
+    .slick-dots {
+        transform: translateY(-2rem) !important;
+    }
+    .slick-dots li button::before{
+        color: #009981;
+        font-size: 0.85rem;
+    }
+    
+    .slick-dots li.slick-active button::before {
+        color: #00483d;
+        font-size: 1.25rem;
+    }
+}
+

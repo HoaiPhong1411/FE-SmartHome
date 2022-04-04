@@ -8,6 +8,12 @@ export const ClientRoutes = [
     },
     {
         index: true,
+        path: '/product',
         element: <ClientProduct/>
-    }
+    },
+    // {
+    //     index:true,
+    //     path: '/blog',
+    //     element: <ClientBlog />
+    // },
 ]

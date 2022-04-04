@@ -1,7 +1,11 @@
+import ClientSlideBanner from "../ClientSlideBanner/ClientSliderBanner";
+import ClientSlideProduct from "../ClientSlideProduct/ClientSlideProduct";
+
 const ClientHome = () => {
     return ( 
         <>
-            Fuck
+            <ClientSlideBanner />
+            <ClientSlideProduct />
         </>
      );
 }
