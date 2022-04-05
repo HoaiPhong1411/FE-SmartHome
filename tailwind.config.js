@@ -11,7 +11,8 @@ module.exports = {
       'color-orange': '#f7941e',
     },
     borderRadius: {
-      'bd8': '8px'
+      'bd8': '8px',
+      'bd4' : '4px'
     },
     padding: {
       '10px': '0.625rem'
@@ -30,6 +31,9 @@ module.exports = {
     extend: {
         boxShadow: {
           'shadow-primary': '0 4px 6px #00000029',
+        },
+        backgroundImage : {
+            // 'heading' : "url ('./src/assets/images/heading.png')"
         }
     },
   },

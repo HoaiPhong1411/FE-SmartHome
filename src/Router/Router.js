@@ -1,5 +1,6 @@
+import ClientCart from "../container/Client/ClientCart/ClientCart";
 import ClientHome from "../container/Client/ClientHome/ClientHome";
-import ClientProduct from "../container/Client/ClientProduct/ClientProduct";
+import FeatureProduct from "../container/Client/ClientHome/Featureproduct/FeatureProduct";
 
 export const ClientRoutes = [
     {
@@ -9,11 +10,11 @@ export const ClientRoutes = [
     {
         index: true,
         path: '/product',
-        element: <ClientProduct/>
+        element: <FeatureProduct/>
     },
-    // {
-    //     index:true,
-    //     path: '/blog',
-    //     element: <ClientBlog />
-    // },
+    {
+        index:true,
+        path: '/cart',
+        element: <ClientCart />
+    },
 ]

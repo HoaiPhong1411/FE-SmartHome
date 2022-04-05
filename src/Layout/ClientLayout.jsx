@@ -4,11 +4,11 @@ import Header from "../component/Header";
 import React from "react";
 
 export default function ClientLayout() {
-    return (
-        <>
-            <Header/>
-            <Outlet/>
-            <Footer/>
-        </>
-    )
+  return (
+    <>
+      <Header />
+      <Outlet />
+      <Footer />
+    </>
+  );
 }
