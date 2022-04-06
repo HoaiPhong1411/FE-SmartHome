@@ -77,10 +77,10 @@ const ClientSlideBanner = () => {
   return (
     <>
       {" "}
-      <div className="relative dt:w-container mx-auto z-0">
+      <div className="relative dt:w-container mx-auto z-[-1]">
         <div
           onClick={() => sliderRef.current.slickPrev()}
-          className="my-arrow arrow-prev absolute left-[1.5rem] hidden dt:flex"
+          className="my-arrow arrow-prev absolute left-[1.5rem] hidden "
         >
           <MdOutlineArrowLeft />
         </div>
@@ -97,7 +97,7 @@ const ClientSlideBanner = () => {
 
         <div
           onClick={() => sliderRef.current.slickNext()}
-          className="my-arrow arrow-next absolute right-[1.5rem] hidden dt:flex"
+          className="my-arrow arrow-next absolute right-[1.5rem] hidden "
         >
           <MdOutlineArrowRight />
         </div>

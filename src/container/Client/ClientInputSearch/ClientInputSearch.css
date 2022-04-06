@@ -10,26 +10,33 @@
 .dropDown::-webkit-scrollbar-thumb{
     background-color: #00483d;
     border-radius: 0.75rem;
+
 }
+
+/* animation input */
 
 @keyframes fadeout {
     0% {
         opacity: 0.7;
-        transform: translateY(-20%);
+        transform: translateY(0);
     }
     50%{
         opacity: 0.4;
-        transform: translateY(-60%);
+        transform: translateY(-90%);
     }
     100%{
         opacity: 0;
-        transform: translateY(-100%);
+        transform: translateY(-150%);
     }
 }
 @keyframes fadein {
     0% {
         opacity: 0.4;
-        transform: translateY(-60%);
+        transform: translateY(-150%);
+    }
+    50%{
+        opacity: 0.7;
+        transform: translateY(-90%);
     }
     100%{
         opacity: 1;
@@ -37,3 +44,40 @@
         z-index: 9999;
     }
 }
+
+/* End animation input */
+
+
+/* animation dropDown */
+
+@keyframes closeDropDown {
+    0% {
+        opacity: 1;
+        transform: translateX(-20%);
+    }
+    50%{
+        opacity: 0.7;
+        transform: translateX(-60%);
+    }
+    100%{
+        opacity: 0.4;
+        transform: translateX(-150%);
+    }
+}
+@keyframes showDropDown {
+    0% {
+        opacity: 0;
+        transform: translateX(-150%);
+    }
+    50%{
+        opacity: 0.5;
+        transform: translateX(-60%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+        z-index: 9999;
+    }
+}
+
+/* End animation dropDown */

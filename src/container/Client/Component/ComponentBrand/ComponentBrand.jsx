@@ -8,9 +8,9 @@ const ComponentBrand = (props) => {
     <>
       <div
         style={style}
-        className="w-[60%] dt:w-[20%] tl:w-[45%] h-[2rem] flex z-0"
+        className="w-[60%] dt:w-[20%] tl:w-[45%] h-[2rem] flex "
       >
-        <div className="w-[25%] bg-hover h-full before:content-[''] relative before:border-t-[2rem] before:border-l-[2rem] before:border-t-second before:border-l-hover before:absolute before:right-0"></div>
+        <div className="w-[25%] bg-hover h-full before:content-[''] relative before:border-t-[2rem] before:border-l-[2rem] before:border-t-second before:border-l-hover before:absolute before:right-0 before:z-[-1] z-[-1]"></div>
         <Link
           to={link}
           onClick={click}

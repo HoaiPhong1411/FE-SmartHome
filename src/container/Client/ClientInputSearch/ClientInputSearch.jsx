@@ -2,6 +2,7 @@ import { BiSearch } from "react-icons/bi";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./ClientInputSearch.css";
+import { flushSync } from "react-dom";
 
 const ListProSearch = [
   {
@@ -62,7 +63,6 @@ const ListProSearch = [
 
 const ClientInputSearch = () => {
   const inputRef = useRef(null);
-  // console.log(inputRef.current);
   const dd = window.pageYOffset;
   window.onscroll = function () {
     const currentPosition = window.pageYOffset;
@@ -75,46 +75,49 @@ const ClientInputSearch = () => {
     }
   };
   const dropDownRef = useRef(null);
-  const [dropDown, setDropDown] = useState();
-  const [showDropDown, setShowDropDown] = useState(true);
+  const [showDropDown, setShowDropDown] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [valueNew, setValueNew] = useState(null);
 
-  // get Element DropDown
-
-  useEffect(() => {
-    setDropDown(dropDownRef);
-  }, []);
-
-  const handleShowDropDown = () => {
-    setShowDropDown(true);
-    handleDropDown();
-  };
-  // Handle DropDown
-  const handleDropDown = () => {
-    if (showDropDown) {
-      dropDown.current.style.height = "25rem";
-      dropDown.current.style.opacity = "1";
-      dropDown.current.style.display = "block";
-    } else {
-      setTimeout(() => {
-        dropDown.current.style.height = "0";
-        dropDown.current.style.opacity = "0";
-        dropDown.current.style.display = "none";
-      }, 100);
-    }
-  };
-
+  // onChange input
   const handleChange = (e) => {
-    // let newValue = inputValue + e.target.value;
-    setInputValue(e.target.value);
-    if (showDropDown == true) {
-      setShowDropDown(false);
-      handleDropDown();
+    const currentValue = e.target.value;
+    setInputValue(currentValue);
+    if (typeof currentValue == "string") {
+      setShowDropDown(true);
+      // console.log(typeof currentValue);
     }
-
-    console.log(showDropDown);
+    if (currentValue == "") {
+      setShowDropDown(false);
+    }
   };
+
+  // onBlur input
+  const handleBlurDropDown = () => {
+    setShowDropDown(false);
+  };
+
+  // handle Show dropDown
+  const handleShowDropDown = () => {
+    const elementDropDown = document.querySelector(".dropDown");
+    if (elementDropDown) {
+      if (showDropDown) {
+        elementDropDown.style.display = "block";
+        elementDropDown.style.animation = "showDropDown 0.4s linear forwards";
+      } else {
+        elementDropDown.style.animation = "closeDropDown 0.4s linear forwards";
+        setTimeout(() => {
+          elementDropDown.style.display = "none";
+        }, 600);
+      }
+    }
+  };
+
+  // open, show input
+
+  // call function
+  handleShowDropDown();
+  // tìm sản phẩm trùng với keyword
   useLayoutEffect(() => {
     const handleSearch = () => {
       const newvalue = [];
@@ -128,6 +131,7 @@ const ClientInputSearch = () => {
     };
     handleSearch();
   }, [inputValue]);
+
   return (
     <>
       {/* input search */}
@@ -142,7 +146,7 @@ const ClientInputSearch = () => {
           {/* dropDown */}
           <div
             ref={dropDownRef}
-            className="dropDown absolute hidden opacity-0 top-[2.8rem] rounded-bd8 shadow-shadow-primary w-[100%] h-0 overflow-y-scroll bg-[#fff] px-10px transition-all z-[9999]"
+            className="dropDown absolute hidden translate-y-[-150%] top-[2.8rem] rounded-bd8 shadow-shadow-primary w-[100%] h-[25rem] overflow-y-scroll bg-[#fff] px-10px transition-all z-[9999]"
           >
             <ul>
               {inputValue == ""
@@ -172,8 +176,7 @@ const ClientInputSearch = () => {
           <input
             ref={inputRef}
             onChange={(e) => handleChange(e)}
-            onBlur={() => handleShowDropDown()}
-            // onFocus={() => handleShowDropDown()}
+            onBlur={() => handleBlurDropDown()}
             type="text"
             value={inputValue}
             name="search"

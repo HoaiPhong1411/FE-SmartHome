@@ -19,7 +19,7 @@ const Header = () => {
 
   return (
     <>
-      <div className=" sticky top-0 w-full bg-[#f4f4f4] z-[9999]">
+      <div className=" sticky top-0 w-full bg-[#f4f4f4] z-9999">
         <div className=" mx-auto dt:w-container bg-[#f4f4f4]">
           {/* NavBar */}
           <div
@@ -120,9 +120,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-      {/* Input search */}
-      <ClientInputSearch />
-      {/* End input search */}
     </>
   );
 };
