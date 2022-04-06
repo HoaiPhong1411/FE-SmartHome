@@ -4,16 +4,16 @@
 /* dots slide */
 
 .slick-dots {
-    transform: translateY(-2.2rem);
+    transform: translateY(-2rem);
 }
 .slick-dots li button::before{
     color: #009981;
-    font-size: 0.85rem;
+    font-size: 0.65rem;
 }
 
 .slick-dots li.slick-active button::before {
     color: #00483d;
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 /* End dots slide */
@@ -22,7 +22,7 @@
 /* arrow slide */
 
 .my-arrow{
-    z-index: 9999;
+    z-index: 1000;
     width: 3rem;
     height: 3rem;
     background-color: #0575666b;

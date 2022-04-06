@@ -10,30 +10,28 @@ import ClientInputSearch from "../container/Client/ClientInputSearch/ClientInput
 import NavBar from "./NavBar";
 
 const Header = () => {
-    const [show, setShow] =
-        useState(true);
+    const [show, setShow] = useState(true);
 
     // Show menu
-    const handleShow = (
-        e
-    ) => {
+    const handleShow = (e) => {
         setShow(!show);
     };
 
     return (
         <>
-            <div className="sticky top-0 mx-auto dt:w-container z-[1000] bg-[#f4f4f4]">
+            <div
+                className="sticky shrink h-[100px] top-0 mx-auto dt:w-container z-[9999] bg-[#f4f4f4]"
+                id="nav"
+            >
                 {/* NavBar */}
                 <div
                     style={
                         show
                             ? {
-                                  transform:
-                                      "translateX(-100%)",
+                                  transform: "translateX(-100%)",
                               }
                             : {
-                                  transform:
-                                      "translateX(0)",
+                                  transform: "translateX(0)",
                               }
                     }
                     className="absolute inset-0 bg-[#fff] z-50 h-[100vh] transition-transform dt:hidden"
@@ -52,17 +50,10 @@ const Header = () => {
                                     to="/login"
                                     className="text-[1rem] font-medium"
                                 >
-                                    Đăng
-                                    nhập
+                                    Đăng nhập
                                 </Link>
                                 <p className="text-13px font-light italic">
-                                    Đăng
-                                    nhập
-                                    để
-                                    nhận
-                                    nhiều
-                                    ưu
-                                    đãi
+                                    Đăng nhập để nhận nhiều ưu đãi
                                 </p>
                             </div>
                         </div>
@@ -70,13 +61,7 @@ const Header = () => {
                         <div>
                             <IoCloseSharp
                                 className="text-[2.5rem] text-[#fff] cursor-pointer"
-                                onClick={(
-                                    e
-                                ) =>
-                                    handleShow(
-                                        e
-                                    )
-                                }
+                                onClick={(e) => handleShow(e)}
                             />
                         </div>
                     </div>
@@ -84,7 +69,7 @@ const Header = () => {
                     {/* menu */}
                     <NavBar
                         classLink="block w-full border-b-[1px] border-b-[#7c7c7c6f] text-18px text-second font-semibold pl-[1.25rem] leading-[4rem] hover:bg-[#f3f3f3]"
-                        onClickShow="true"
+                        onClickShow={(e) => handleShow(e)}
                     />
                 </div>
                 {/* End Navbar */}
@@ -97,13 +82,7 @@ const Header = () => {
                     <div className="dt:hidden">
                         <HiOutlineMenuAlt1
                             className="text-[1.75rem]"
-                            onClick={(
-                                e
-                            ) =>
-                                handleShow(
-                                    e
-                                )
-                            }
+                            onClick={(e) => handleShow(e)}
                         />
                     </div>
                     {/* End icon menu */}
@@ -112,9 +91,7 @@ const Header = () => {
                     <div>
                         <Link to="/">
                             <img
-                                src={
-                                    logo
-                                }
+                                src={logo}
                                 className="h-[4rem] translate-y-[-0.25rem] 
                                   cursor-pointer dt:w-[12rem] dt:h-[5rem] "
                             />
@@ -132,7 +109,10 @@ const Header = () => {
                             />
                         </div>
                         {/* End Menu */}
-                        <div className="relative mr-[0.1rem] cursor-pointer">
+                        <Link
+                            to="/cart"
+                            className="relative mr-[0.1rem] cursor-pointer"
+                        >
                             <AiOutlineShoppingCart className="text-[1.75rem] text-second hover:text-hover" />
 
                             {/* Cart total */}
@@ -146,13 +126,15 @@ const Header = () => {
                             </span>
 
                             {/* End Cart total */}
-                        </div>
+                        </Link>
                     </div>
                     {/* End icon cart */}
                 </div>
 
                 {/* Input search */}
-                <ClientInputSearch />
+                <div id="input">
+                    <ClientInputSearch />
+                </div>
                 {/* End input search */}
             </div>
         </>

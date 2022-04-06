@@ -1,7 +1,10 @@
+
+
+
 const ClientProduct = () => {
     return ( 
         <>
-        Product
+        product
         </>
      );
 }

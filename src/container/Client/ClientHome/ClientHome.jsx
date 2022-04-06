@@ -1,13 +1,15 @@
 import FeatureProduct from "./Featureproduct/FeatureProduct";
 import ClientSlideBanner from "../ClientSlideBanner/ClientSliderBanner";
+import ClientSlideProduct from "../ClientSlideProduct/ClientSlideProduct";
 
 const ClientHome = () => {
-    return ( 
+    return (
         <>
-            <ClientSlideBanner/>
-            <FeatureProduct  />
+            <ClientSlideBanner />
+            <ClientSlideProduct />
+            <FeatureProduct />
         </>
-     );
-}
- 
+    );
+};
+
 export default ClientHome;
