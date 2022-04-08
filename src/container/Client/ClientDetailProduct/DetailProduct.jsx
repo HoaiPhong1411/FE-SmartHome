@@ -118,7 +118,7 @@ const DetailProduct = () => {
 
     return (
         // container detailproduct
-        <div className="mt-16 flex flex-col px-[8px] mb-20 tl:w-container tl:mt-20 tl:mx-auto dt:w-container dt:mx-auto ">
+        <div className="mt-16 flex flex-col px-[8px] mb-20 tl:w-container tl:mt-20 tl:mx-auto dt:w-container dt:mx-auto z-[-1] ">
             <div>
                 <h3 className="text-18px text-primary font-bold">
                     Điện thoại iPhone 13 Pro Max 256GB
